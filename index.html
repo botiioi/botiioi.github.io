@@ -2,8 +2,10 @@
 <html lang="en">
 
 <head>
+	<meta name="description" content="Front-end, Javascript, NodeJs developer. Kapustiansky Oleg.">
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150359996-1"></script>
 	<script>
@@ -29,6 +31,10 @@
 			box-sizing: border-box;
 			font-family: 'Mansalva', cursive;
 			font-size: 100%;
+		}
+
+		header, h1, h2, h3, h4 {
+			display: none;
 		}
 
 		a {
@@ -393,7 +399,6 @@
 				font-size: 0.8em;
 				line-height: 1.1em;
 			}
-
 			img {
 				width: 280px;
 				height: 140px;
@@ -496,11 +501,10 @@
 
 <body>
 	<div class="sections-wrapper">
-		<header>
-			<h1>
-			</h1>
-		</header>
 		<section class="anim">
+				<header>
+						<h1>main page</h1>
+				</header>
 			<svg id="logo" viewBox="0 0 67.984642 97.2226791">
 
 				<path class="first-line" fill="none" stroke="#000000" stroke-width="5" stroke-linecap="round"
@@ -526,14 +530,17 @@
 			</svg>
 		</section>
 		<section class="working">
+				<h2>working page</h2>
 			<div><img src="images/my.svg" alt="my-work"></div>
 			<pre id="working-hard"></pre>
 		</section>
 		<section class="skils">
+				<h3>skils page</h3>
 			<div><img src="images/stak.svg" alt="my-skils"></div>
 			<pre id="skils-hard"></pre>
 		</section>
 		<section class="not-working">
+				<h4>not-working page</h4>
 			<div><img src="images/not.svg" alt="my-not-working"></div>
 			<pre id="not-working-hard"></pre>
 		</section>
@@ -568,7 +575,12 @@ n
 g</a></li>
 		</ul>
 	</nav>
-	<footer class="connect">
+	<footer class="connect" itemscope="" itemtype="http://schema.org/Person">
+			<meta itemprop="name" content="Oleg Kapustiansky">
+			<meta itemprop="knowsAbout" content="Front-end, javascript, full-stack, illustration, UX, UI">
+			<meta itemprop="description" content="Front-end developer, coder, programer, mean">
+			<meta itemprop="image" content="https://kapustiansky.tk/social-preview.png">
+			<link itemprop="url" href="https://kapustiansky.tk">
 		<div class="lin-cont">
 			<link itemprop="sameAs" href="https://www.linkedin.com/in/oleg-kapustiansky-b73303183/">
 			<a href="https://www.linkedin.com/in/oleg-kapustiansky-b73303183/" target="_blank" rel="noopener">
