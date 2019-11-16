@@ -2,21 +2,10 @@
 <html lang="en" prefix="og:http://ogp.me/ns#">
 
 <head>
-	<meta name="description" content="Front-end, javascript, node.js, web-developer.">
-	<meta charset="UTF-8">
-	<meta property="og:type" content="website">
-	<!-- <meta property="og:site_name" content="Kapustiansky Oleg"> -->
-	<meta property="og:title" itemprop="name" content="Kapustiansky Oleg">
-	<meta property="og:description" content="Front-end, javascript, node.js, web-developer.">
-	<meta property="og:url" content="https://kapustiansky.tk">
-	<!-- <meta property="og:locale" content="ru_RU"> -->
-	<meta property="og:image" content="https://kapustiansky.tk/social-preview.png">
-	<link itemprop="image" href="https://kapustiansky.tk/social-preview.png">
-	<link rel="canonical" href="https://kapustiansky.tk/index.html" />
-	<!-- <meta property="og:image:width" content="968">
-	<meta property="og:image:height" content="504"> -->
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<title>Kapustiansky Oleg</title>
+	<noscript>
+		<p>Your browser does not support scripts!</p>
+	</noscript>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150359996-1"></script>
 	<script>
@@ -28,494 +17,28 @@
 		gtag('js', new Date());
 		gtag('config', 'UA-150359996-1');
 	</script>
-	<title>Kapustiansky Oleg</title>
-	<noscript>
-		<p>Your browser does not support scripts!</p>
-	</noscript>
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<meta name="description" content="Front-end, javascript, node.js, web-developer.">
+	<meta charset="UTF-8">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Kapustiansky Oleg">
+	<meta property="og:description" content="Front-end, javascript, node.js, web-developer.">
+	<meta property="og:url" content="https://kapustiansky.tk">
+	<meta property="og:image" content="https://kapustiansky.tk/social-preview.png">
+	<link itemprop="image" href="https://kapustiansky.tk/social-preview.png">
+	<link rel="canonical" href="https://kapustiansky.tk/index.html" />
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
-	<meta content="width=device-width, initial-scale=1" name="viewport" />
-	<style>
-		* {
-			padding: 0;
-			margin: 0;
-			box-sizing: border-box;
-			font-family: 'Mansalva', cursive;
-			font-size: 100%;
-		}
-
-		header, h1, h2, h3, h4 {
-			display: none;
-		}
-
-		a {
-			text-decoration: none;
-		}
-
-		/* SECTIONS*/
-		.sections-wrapper {
-			width: 100%;
-			/* height: 100vh; */
-			height: 100%;
-			display: flex;
-			justify-content: center;
-		}
-
-		#logo {
-			position: absolute;
-			top: 45%;
-			left: 50%;
-			width: 320px;
-			height: 320px;
-			transform: translate(-50%, -50%);
-			animation: logo-max 2s ease forwards 2.5s;
-			filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, .8));
-		}
-
-		.first-line {
-			stroke-dasharray: 215;
-			stroke-dashoffset: 215;
-			animation: stroke 0.6s forwards 0.5s;
-		}
-
-		.second-line {
-			stroke-dasharray: 22;
-			stroke-dashoffset: 22;
-			animation: stroke 0.1s ease forwards 1.5s, gaze 4s normal 6s, clip 15s step-end 12s infinite;
-		}
-
-		.third-line {
-			stroke-dasharray: 22;
-			stroke-dashoffset: 22;
-			animation: stroke 0.1s ease forwards 2s, gaze 4s normal 6s, clip 15s step-end 12s infinite;
-		}
-
-		.trim {
-			animation: trim 1s ease-out 0.4s 1 normal;
-		}
-
-		.working,
-		.skils,
-		.not-working {
-			display: none;
-			text-align: center;
-		}
-
-		.working-anim,
-		.skils-anim,
-		.not-working-anim {
-			display: block;
-			opacity: 0;
-			animation: bounce-in 1s forwards 0.8s 1 normal;
-		}
-
-		#working-hard,
-		#skils-hard,
-		#not-working-hard {
-			margin-top: 2rem;
-			font-size: 3em;
-			color: rgb(90, 90, 90);
-		}
-
-		img {
-			width: 550px;
-			height: 275px;
-			margin-top: 1rem;
-			filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, .8));
-		}
-
-		/* NAVIGATE */
-		nav {
-			color: rgba(114, 108, 108, 0.863);
-			position: fixed;
-			opacity: 0;
-			top: 40%;
-			right: 1rem;
-			animation: show-text 4s forwards 13.2s;
-		}
-
-		li {
-			text-transform: uppercase;
-			font-size: 1.1rem;
-			list-style-type: none;
-			padding: 1px;
-			cursor: pointer;
-			transition: 0.3s;
-		}
-
-		li:hover {
-			transform: translate(-3px, -3px);
-			text-shadow: 2px 2px 3px rgba(0, 0, 0, .8);
-		}
-
-		.nav-link {
-			color: rgba(114, 108, 108, 0.863);
-		}
-
-		.nav-link:hover {
-			color: black;
-		}
-
-		/* FOOTER */
-		.connect {
-			display: flex;
-			padding: 2rem;
-			margin-left: 5rem;
-			margin-right: 5rem;
-			justify-content: space-between;
-			position: absolute;
-			left: 0;
-			right: 0;
-			bottom: 0;
-		}
-
-		.lin,
-		.gh,
-		.mail,
-		.tg {
-			width: 50px;
-			height: 50px;
-			opacity: 0;
-			cursor: pointer;
-			filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, .8));
-			animation: bounce-in 0.7s forwards 10s;
-		}
-
-		.telegram-cont,
-		.lin-cont,
-		.github-cont,
-		.mail-cont {
-			display: flex;
-		}
-
-		.acount-link {
-			color: rgba(114, 108, 108, 0.863);
-			animation: show-text 4s forwards 13.2s;
-			opacity: 0;
-			padding-left: 0.5rem;
-			padding-top: 0.3rem;
-			line-height: 1.2rem;
-		}
-
-		.acount-link:hover {
-			color: black;
-		}
-
-		/* ANIMATION */
-
-		@keyframes bounce-in {
-			0% {
-				opacity: 0;
-				transform: scale(.3);
-			}
-			50% {
-				opacity: 1;
-				transform: scale(1.0);
-			}
-			70% {
-				opacity: 1;
-				transform: scale(0.9);
-			}
-			100% {
-				opacity: 1;
-				transform: scale(1);
-			}
-		}
-
-		@keyframes trim {
-			0% {
-				opacity: 1;
-			}
-			5% {
-				opacity: 0;
-			}
-			10% {
-				opacity: 0.5;
-			}
-			15% {
-				opacity: 0;
-			}
-			20% {
-				opacity: 0.5;
-			}
-			25% {
-				opacity: 0;
-			}
-			30% {
-				opacity: 0.5;
-			}
-			35% {
-				opacity: 0;
-			}
-			40% {
-				opacity: 0.5;
-			}
-			45% {
-				opacity: 0;
-			}
-			50% {
-				opacity: 1;
-			}
-		}
-
-		@keyframes gaze {
-			20%,40% {
-				transform: translate(4px, 0px);
-			}
-			60%,80% {
-				transform: translate(-4px, 0px);
-			}
-			100% {
-				transform: translate(0px, 0px);
-			}
-		}
-
-		@keyframes clip {
-			1% {
-				opacity: 1;
-				transform: translate(0px, 0px);
-			}
-			0% {
-				opacity: 0;
-				transform: translate(1px, 2px);
-			}
-			100% {
-				opacity: 1;
-				transform: translate(0px, 0px);
-			}
-		}
-
-		@keyframes stroke {
-			to {
-				stroke-dashoffset: 0;
-			}
-		}
-
-		@keyframes logo-max {
-			to {
-				top: 12rem;
-				width: 240px;
-				height: 240px;
-			}
-		}
-
-		@keyframes show-text {
-			to {
-				opacity: 1;
-			}
-		}
-
-		/* MEDIA-ANIMATION*/
-		@keyframes logo-min {
-				to {
-					top: 15rem;
-					width: 240px;
-					height: 160px;
-				}
-		}
-
-		@keyframes logo-tablet {
-				to {
-					top: 15rem;
-					width: 260px;
-					height: 180px;
-				}
-		}
-
-		@keyframes logo-retina {
-				to {
-					top: 170px;
-					width: 240px;
-					height: 160px;
-				}
-		}
-
-		/* MEDIA */
-		@media screen and (max-width: 991.98px) {
-			#logo {
-				animation: logo-tablet 2s ease forwards 2.5s;
-				width: 280px;
-				height: 280px;
-			}
-
-			img {
-				width: 320px;
-				height: 160px;
-				margin-top: 6rem;
-			}
-
-			#working-hard, #skils-hard, #not-working-hard {
-			margin-top: 3rem;
-			font-size: 1.8em;
-			}
-
-			nav {
-				top: 35%;
-			}
-
-			li {
-                font-size: 1em;
-			}
-
-			.lin,
-			.gh,
-			.mail,
-			.tg {
-				width: 40px;
-				height: 40px;
-			}
-
-			.acount-link {
-				line-height: 1em;			
-			}
-
-			.connect {
-				margin-left: 3rem;
-    			margin-right: 3rem;
-			}
-		}
-
-		@media screen and (max-width:768px) {
-			#logo {
-				animation: logo-min 2s ease forwards 2.5s;
-			}
-		
-			nav {
-				top: 0.8rem;
-			}
-
-			.nav-link {
-				white-space: pre;
-			}
-
-			li {
-                margin-top: 0.5rem;
-				padding: 0;
-			}
-
-			.lin,
-			.gh,
-			.mail,
-			.tg {
-				width: 35px;
-				height: 35px;
-			}
-
-			.connect {
-				padding: 0;
-				margin: 0.5rem;
-			}
-
-			.acount-link {
-				font-size: 0.8em;
-				line-height: 1.1em;
-			}
-			img {
-				width: 280px;
-				height: 140px;
-			}
-
-			#working-hard, #skils-hard, #not-working-hard {
-			font-size: 1.6em;
-			}
-		}
-
-		/* @media screen and (max-width: 576px) {
-			li {
-                font-size: 0.7em;
-			}
-
-			.lin,
-			.gh,
-			.mail,
-			.tg {
-				width: 25px;
-				height: 25px;
-			}
-
-			.connect {
-				margin: 5px;
-				padding: 0;
-			}
-
-			.acount-link {
-				font-size: 0.8em;
-				padding-left: 2px;
-				padding-top: 2px;
-				font-size: 0.7em;
-			}
-
-			#working-hard, #skils-hard, #not-working-hard {
-				font-size: 1.4em;
-				margin-top: 2rem;
-			}
-
-			img {
-				width: 240px;
-				margin-top: 4rem;
-			}
-		} */
-
-		@media
-			only screen and (-webkit-min-device-pixel-ratio: 2)      and (max-width: 375px),
-			only screen and (   min--moz-device-pixel-ratio: 2)      and (max-width: 375px),
-			only screen and (     -o-min-device-pixel-ratio: 2/1)    and (max-width: 375px),
-			only screen and (        min-device-pixel-ratio: 2)      and (max-width: 375px),
-			only screen and (                min-resolution: 192dpi) and (max-width: 375px),
-			only screen and (                min-resolution: 2dppx)  and (max-width: 375px) { 
-
-			#logo {
-				animation: logo-retina 2s ease forwards 2.5s;
-			}
-
-			nav {
-				right: 8px;
-			}
-
-			li {
-                font-size: 0.7em;
-			}
-
-			.lin,
-			.gh,
-			.mail,
-			.tg {
-				width: 25px;
-				height: 25px;
-				filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .8));
-			}
-
-			.connect {
-				margin: 5px;
-				padding: 0;
-			}
-
-			.acount-link {
-				font-size: 0.8em;
-				padding-left: 2px;
-				padding-top: 2px;
-				font-size: 0.7em;
-			}
-
-			#working-hard, #skils-hard, #not-working-hard {
-				font-size: 1.4em;
-				margin-top: 2rem;
-			}
-
-			img {
-				width: 240px;
-				margin-top: 4rem;
-			}
-		}
-	</style>
+	<link rel="stylesheet" href="main.css">
 </head>
 
 <body>
 	<div class="sections-wrapper">
 		<section class="anim">
-				<header>
-						<h1>main page</h1>
-				</header>
+			<header>
+				<h1>main page</h1>
+			</header>
 			<svg id="logo" viewBox="0 0 67.984642 97.2226791">
 
 				<path class="first-line" fill="none" stroke="#000000" stroke-width="5" stroke-linecap="round"
@@ -541,17 +64,17 @@
 			</svg>
 		</section>
 		<section class="working">
-				<h2>working page</h2>
+			<h2>working page</h2>
 			<div><img src="images/my.svg" alt="my-work"></div>
 			<pre id="working-hard"></pre>
 		</section>
 		<section class="skils">
-				<h3>skils page</h3>
+			<h3>skils page</h3>
 			<div><img src="images/stak.svg" alt="my-skils"></div>
 			<pre id="skils-hard"></pre>
 		</section>
 		<section class="not-working">
-				<h4>not-working page</h4>
+			<h4>not-working page</h4>
 			<div><img src="images/not.svg" alt="my-not-working"></div>
 			<pre id="not-working-hard"></pre>
 		</section>
@@ -559,39 +82,39 @@
 	<nav>
 		<ul class="navigate">
 			<li><a class="nav-link" id="working" href="#working">#
-w
-o
-r
-k
-i
-n
-g</a></li>
+					w
+					o
+					r
+					k
+					i
+					n
+					g</a></li>
 			<li><a class="nav-link" id="skils" href="#skils">#
-s
-k
-i
-l
-s</a></li>
+					s
+					k
+					i
+					l
+					s</a></li>
 			<li><a class="nav-link" id="not-working" href="#not-working">#
-n
-o
-t
--
-w
-o
-r
-k
-i
-n
-g</a></li>
+					n
+					o
+					t
+					-
+					w
+					o
+					r
+					k
+					i
+					n
+					g</a></li>
 		</ul>
 	</nav>
 	<footer class="connect" itemscope="" itemtype="http://schema.org/Person">
-			<meta itemprop="name" content="Oleg Kapustiansky">
-			<meta itemprop="knowsAbout" content="Front-end, javascript, full-stack, illustration, animation, UX, UI">
-			<meta itemprop="description" content="Front-end developer, full stack, coder, programer, mean">
-			<meta itemprop="image" content="https://kapustiansky.tk/social-preview.png">
-			<link itemprop="url" href="https://kapustiansky.tk">
+		<meta itemprop="name" content="Oleg Kapustiansky">
+		<meta itemprop="knowsAbout" content="Front-end, javascript, full-stack, illustration, animation, UX, UI">
+		<meta itemprop="description" content="Front-end developer, full stack, coder, programer, mean">
+		<meta itemprop="image" content="https://kapustiansky.tk/social-preview.png">
+		<link itemprop="url" href="https://kapustiansky.tk">
 		<div class="lin-cont">
 			<link itemprop="sameAs" href="https://www.linkedin.com/in/oleg-kapustiansky-b73303183/">
 			<a href="https://www.linkedin.com/in/oleg-kapustiansky-b73303183/" target="_blank" rel="noopener">
