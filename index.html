@@ -89,7 +89,7 @@ k
 i
 n
 g</a></li>
-			<li><a class="nav-link" id="skils" href="#skils">#
+			<li><a class="nav-link" id="skils" href="#skills">#
 s
 k
 i
@@ -197,7 +197,7 @@ g</a></li>
 				document.querySelector('.sections-wrapper').classList.toggle('trim');
 
 				if (event.target.id === 'working') {
-					history.pushState({dates: Date(), url:location.href}, document.title);
+					history.pushState(null, 'Working','https://kapustiansky.tk/#working');
 
 					function trimAnim() {
 						return new Promise((resolve) => {
@@ -256,7 +256,7 @@ g</a></li>
 
 
 				if (event.target.id === 'skils') {
-					history.pushState({dates: Date(), url:location.href}, document.title);
+					history.pushState(null, 'Skills','https://kapustiansky.tk/#skills');
 
 					function trimAnim() {
 						return new Promise((resolve) => {
@@ -316,7 +316,7 @@ g</a></li>
 
 
 				if (event.target.id === 'not-working') {
-					history.pushState({dates: Date(), url:location.href}, document.title);
+					history.pushState(null, 'Not-working','https://kapustiansky.tk/#not-working');
 
 					function trimAnim() {
 						return new Promise((resolve) => {
