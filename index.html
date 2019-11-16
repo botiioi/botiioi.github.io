@@ -172,7 +172,8 @@ g</a></li>
 	<script>
 		(function () {
 
-			//console.log(document.documentElement.clientWidth)
+			history.pushState('', document.title, window.location.pathname);
+
 			let work = document.getElementById('#working');
 			let skil = document.getElementById('#skils');
 			let notWorking = document.getElementById('#not-working');
@@ -196,6 +197,7 @@ g</a></li>
 				document.querySelector('.sections-wrapper').classList.toggle('trim');
 
 				if (event.target.id === 'working') {
+					history.pushState({dates: Date(), url:location.href}, document.title);
 
 					function trimAnim() {
 						return new Promise((resolve) => {
@@ -254,6 +256,7 @@ g</a></li>
 
 
 				if (event.target.id === 'skils') {
+					history.pushState({dates: Date(), url:location.href}, document.title);
 
 					function trimAnim() {
 						return new Promise((resolve) => {
@@ -313,6 +316,7 @@ g</a></li>
 
 
 				if (event.target.id === 'not-working') {
+					history.pushState({dates: Date(), url:location.href}, document.title);
 
 					function trimAnim() {
 						return new Promise((resolve) => {
