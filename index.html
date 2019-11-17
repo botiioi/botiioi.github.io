@@ -69,9 +69,9 @@
 			<div><img src="images/my.svg" alt="my-work"></div>
 			<pre id="working-hard"></pre>
 		</section>
-		<section class="skils">
-			<div><img src="images/stak.svg" alt="my-skils"></div>
-			<pre id="skils-hard"></pre>
+		<section class="skills">
+			<div><img src="images/stak.svg" alt="my-skills"></div>
+			<pre id="skills-hard"></pre>
 		</section>
 		<section class="not-working">
 			<div><img src="images/not.svg" alt="my-not-working"></div>
@@ -88,7 +88,7 @@ k
 i
 n
 g</a></li>
-			<li><a class="nav-link" id="skils" href="#skills">#
+			<li><a class="nav-link" id="skills" href="#skills">#
 s
 k
 i
@@ -174,7 +174,7 @@ g</a></li>
 			history.pushState(null, document.title, window.location.pathname);
 
 			let work = document.getElementById('#working');
-			let skil = document.getElementById('#skils');
+			let skil = document.getElementById('#skills');
 			let notWorking = document.getElementById('#not-working');
 
 			// document.querySelector('.navigate').onclick = function(event) {
@@ -239,12 +239,12 @@ g</a></li>
 						document.querySelector('.sections-wrapper').classList.toggle('trim');
 
 						document.querySelector('.anim').style.display = 'none';
-						document.querySelector('.skils').classList.remove('skils-anim');
+						document.querySelector('.skills').classList.remove('skills-anim');
 						document.querySelector('.not-working').classList.remove('not-working-anim');
 
 						document.querySelector('.working').classList.add('working-anim');
 
-						document.querySelector('#skils-hard').innerHTML = '';
+						document.querySelector('#skills-hard').innerHTML = '';
 						document.querySelector('#not-working-hard').innerHTML = '';
 						return false;
 					}
@@ -253,7 +253,7 @@ g</a></li>
 
 
 
-				if (event.target.id === 'skils') {
+				if (event.target.id === 'skills') {
 
 					function trimAnim() {
 						return new Promise((resolve) => {
@@ -271,7 +271,7 @@ g</a></li>
 							setTimeout(() => {
 								if (document.documentElement.clientWidth < 992) {
 									writeTextByJS(
-										"skils-hard",
+										"skills-hard",
 										[
 											"Improve my skills,\n",
 											"learn new tools...\n"
@@ -279,7 +279,7 @@ g</a></li>
 									)
 								} else {
 									writeTextByJS(
-										"skils-hard",
+										"skills-hard",
 										[
 											"Improve my soft-skills\n",
 											"and learn new dev tools ...\n"
@@ -299,7 +299,7 @@ g</a></li>
 						document.querySelector('.working').classList.remove('working-anim');
 						document.querySelector('.not-working').classList.remove('not-working-anim');
 
-						document.querySelector('.skils').classList.add('skils-anim');
+						document.querySelector('.skills').classList.add('skills-anim');
 
 						document.querySelector('#working-hard').innerHTML = '';
 						document.querySelector('#not-working-hard').innerHTML = '';
@@ -354,12 +354,12 @@ g</a></li>
 						document.querySelector('.sections-wrapper').classList.toggle('trim');
 
 						document.querySelector('.anim').style.display = 'none';
-						document.querySelector('.skils').classList.remove('skils-anim');
+						document.querySelector('.skills').classList.remove('skills-anim');
 						document.querySelector('.working').classList.remove('working-anim');
 
 						document.querySelector('.not-working').classList.add('not-working-anim');
 
-						document.querySelector('#skils-hard').innerHTML = '';
+						document.querySelector('#skills-hard').innerHTML = '';
 						document.querySelector('#working-hard').innerHTML = '';
 						return false;
 					}
