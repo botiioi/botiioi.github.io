@@ -197,7 +197,7 @@ g</a></li>
 				document.querySelector('.sections-wrapper').classList.toggle('trim');
 
 				if (event.target.id === 'working') {
-					history.pushState('Working', 'Working','https://kapustiansky.tk/#working');
+					history.pushState('https://kapustiansky.tk/#working', 'Working','https://kapustiansky.tk/#working');
 
 					function trimAnim() {
 						return new Promise((resolve) => {
@@ -412,6 +412,10 @@ g</a></li>
 			//         behavior: 'smooth'
 			//     });
 			// }
+
+			window.addEventListener('popstate', function(event) {
+  console.log('lol');
+});
 		})();
 	</script>
 </body>
