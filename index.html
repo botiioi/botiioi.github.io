@@ -172,7 +172,7 @@ g</a></li>
 	<script>
 		(function () {
 
-			// history.pushState('', document.title, window.location.pathname);
+			history.pushState(null, document.title, window.location.pathname);
 
 			let work = document.getElementById('#working');
 			let skil = document.getElementById('#skils');
@@ -197,7 +197,6 @@ g</a></li>
 				document.querySelector('.sections-wrapper').classList.toggle('trim');
 
 				if (event.target.id === 'working') {
-					history.pushState('https://kapustiansky.tk/#working', 'Working','https://kapustiansky.tk/#working');
 
 					function trimAnim() {
 						return new Promise((resolve) => {
@@ -256,7 +255,6 @@ g</a></li>
 
 
 				if (event.target.id === 'skils') {
-					history.pushState('Skills', 'Skills','https://kapustiansky.tk/#skills');
 
 					function trimAnim() {
 						return new Promise((resolve) => {
@@ -316,7 +314,6 @@ g</a></li>
 
 
 				if (event.target.id === 'not-working') {
-					history.pushState('Not-working', 'Not-working','https://kapustiansky.tk/#not-working');
 
 					function trimAnim() {
 						return new Promise((resolve) => {
@@ -413,9 +410,6 @@ g</a></li>
 			//     });
 			// }
 
-			window.addEventListener('popstate', function(event) {
-  console.log('lol');
-});
 		})();
 	</script>
 </body>
