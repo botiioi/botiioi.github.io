@@ -315,6 +315,13 @@ li:hover {
     }
 }
 
+@keyframes logo-land {
+    to {
+        top: 0.2rem;
+        width: 240px;
+        height: 160px;
+    }
+}
 /* MEDIA */
 @media screen and (max-width: 991.98px) {
     #logo {
