@@ -429,19 +429,19 @@ li:hover {
     }
 
     .acount-link {
-        font-size: 1em;
+        font-size: 0.9em;
         padding-left: 2px;
         padding-top: 2px;
     }
 
     #working-hard, #skills-hard, #not-working-hard {
         font-size: 1.1em;
-        margin-top: 0.3rem;
+        margin-top: 0.2rem;
     }
 
     img {
         width: 240px;
-        margin-top: 0.2rem;
+        margin-top: 0.1rem;
     }
 }
 
