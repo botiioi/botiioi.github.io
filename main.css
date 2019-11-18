@@ -317,7 +317,7 @@ li:hover {
 
 @keyframes logo-land {
     to {
-        top: 10rem;
+        top: 12rem;
         width: 240px;
         height: 160px;
     }
@@ -435,7 +435,6 @@ li:hover {
     }
 
     .connect {
-        padding: 0;
         margin: 0.5rem
     }
 
