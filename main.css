@@ -315,13 +315,6 @@ li:hover {
     }
 }
 
-@keyframes logo-land {
-    to {
-        top: 12rem;
-        width: 240px;
-        height: 160px;
-    }
-}
 /* MEDIA */
 @media screen and (max-width: 991.98px) {
     #logo {
@@ -419,7 +412,7 @@ li:hover {
 
  @media (orientation: landscape) {
     #logo {
-        animation: logo-land 2s ease forwards 2.5s;
+        animation: logo-min 2s ease forwards 2.5s;
     }
 
     li {
