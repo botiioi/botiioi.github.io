@@ -412,15 +412,7 @@ li:hover {
 
  @media (orientation: landscape) {
     li {
-        font-size: 0.7em;
-    }
-
-    .lin,
-    .gh,
-    .mail,
-    .tg {
-        width: 25px;
-        height: 25px;
+        font-size: 0.8em;
     }
 
     .connect {
@@ -429,20 +421,19 @@ li:hover {
     }
 
     .acount-link {
-        font-size: 0.8em;
+        font-size: 0.9em;
         padding-left: 2px;
         padding-top: 2px;
-        font-size: 0.7em;
     }
 
     #working-hard, #skills-hard, #not-working-hard {
-        font-size: 1.4em;
-        margin-top: 2rem;
+        font-size: 1.2em;
+        margin-top: 1rem;
     }
 
     img {
         width: 240px;
-        margin-top: 4rem;
+        margin-top: 1rem;
     }
 }
 
