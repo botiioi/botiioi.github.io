@@ -370,6 +370,46 @@ li:hover {
     }
 }
 
+ @media screen and (max-width: 895px) and (orientation: landscape) {
+    #logo {
+        animation: logo-land 2s ease forwards 2.5s;
+    }
+
+    li {
+        font-size: 0.8em;
+    }
+
+    .lin,
+    .gh,
+    .mail,
+    .tg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .connect {
+        padding: 1rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .acount-link {
+        font-size: 0.7em;
+        padding-left: 2px;
+        padding-top: 2px;
+    }
+
+    #working-hard, #skills-hard, #not-working-hard {
+        font-size: 1.2em;
+        margin-top: 0.2rem;
+    }
+
+    img {
+        width: 240px;
+        margin-top: 0.1rem;
+    }
+}
+
 @media screen and (max-width:768px) {
     #logo {
         animation: logo-min 2s ease forwards 2.5s;
@@ -415,46 +455,6 @@ li:hover {
     #skills-hard,
     #not-working-hard {
         font-size: 1.6em;
-    }
-}
-
- @media (orientation: landscape) {
-    #logo {
-        animation: logo-land 2s ease forwards 2.5s;
-    }
-
-    li {
-        font-size: 0.8em;
-    }
-
-    .lin,
-    .gh,
-    .mail,
-    .tg {
-        width: 25px;
-        height: 25px;
-    }
-
-    .connect {
-        padding: 1rem;
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
-
-    .acount-link {
-        font-size: 0.7em;
-        padding-left: 2px;
-        padding-top: 2px;
-    }
-
-    #working-hard, #skills-hard, #not-working-hard {
-        font-size: 1.2em;
-        margin-top: 0.2rem;
-    }
-
-    img {
-        width: 240px;
-        margin-top: 0.1rem;
     }
 }
 
