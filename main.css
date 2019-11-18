@@ -317,7 +317,7 @@ li:hover {
 
 @keyframes logo-land {
     to {
-        top: 10rem;
+        top: 8rem;
         width: 240px;
         height: 160px;
     }
@@ -423,7 +423,7 @@ li:hover {
     }
 
     li {
-        font-size: 1em;
+        font-size: 0.9em;
     }
 
     .lin,
@@ -436,7 +436,7 @@ li:hover {
 
     .connect {
         padding: 0;
-        margin: 0.5rem
+        margin: 0.5rem;
     }
 
     .acount-link {
