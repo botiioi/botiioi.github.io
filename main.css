@@ -411,6 +411,10 @@ li:hover {
 }
 
  @media (orientation: landscape) {
+    #logo {
+        animation: logo-land 2s ease forwards 2.5s;
+    }
+
     li {
         font-size: 1em;
     }
@@ -429,7 +433,7 @@ li:hover {
     }
 
     .acount-link {
-        font-size: 0.9em;
+        font-size: 0.7em;
         padding-left: 2px;
         padding-top: 2px;
     }
