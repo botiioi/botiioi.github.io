@@ -17,30 +17,31 @@
 		gtag('js', new Date());
 		gtag('config', 'UA-150359996-1');
 	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-	<meta name="keywords" content="kapustiansky oleg, full-stack, front-end, javascript, node.js, web-developer, Капустянский Олег Вадимович">
+	<meta name="keywords" content="kapustiansky oleg, front-end, javascript, node.js, web-developer, Капустянский Олег Вадимович">
 	<meta name="description" content="Front-end, javascript, node.js, web-developer">
 	<meta charset="UTF-8">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Kapustiansky Oleg">
-	<meta property="og:description" content="Front-end, full-stack, javascript, node.js, web-developer">
+	<meta property="og:description" content="Front-end, javascript, node.js, web-developer">
 	<meta property="og:url" content="https://kapustiansky.tk">
 	<meta property="og:image" content="https://kapustiansky.tk/social-preview.png">
 	<link itemprop="image" href="https://kapustiansky.tk/social-preview.png">
 	<link rel="canonical" href="https://kapustiansky.tk/index.html" />
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-	<div class="sections-wrapper">
-		<section class="anim">
+	<div class="sections-wrapper" id="fullpage">
+		<section class="anim vertical-scrolling">
 			<header>
 				<h1>Kapustiansky Oleg: Front-end, javascript developer</h1>
-				<h2>Full-stack and node.js development</h2>
-				<h3>Web-developer, coder, programer</h3>
+				<h2>full-stack and node.js development</h2>
+				<h3>web-developer, coder, programer</h3>
 			</header>
 			<svg id="logo" viewBox="0 0 67.984642 97.2226791">
 
@@ -66,16 +67,24 @@
 	c0.113205,4.0482025-0.003788,7.8014145-0.2534142,11.2074738" />
 			</svg>
 		</section>
-		<section class="working">
-			<div><img src="images/my.svg" alt="my-work"></div>
+		<section class="working vertical-scrolling">
+			<header>
+				<h1>Капустянский Олег: фронт энд разработчик</h1>
+				<h2>разработка сайтов</h2>
+				<h3>js, nodejs, html5, css3</h3>
+			</header>
+			<img data-src="images/my.svg" alt="my-work">
 			<pre id="working-hard"></pre>
 		</section>
-		<section class="skills">
-			<div><img src="images/stak.svg" alt="my-skills"></div>
+		<section class="skills vertical-scrolling">
+			<header>
+				<h1>Капустянський Олег: розробка сайтів</h1>
+			</header>
+			<img data-src="images/stak.svg" alt="my-skills">
 			<pre id="skills-hard"></pre>
 		</section>
-		<section class="not-working">
-			<div><img src="images/not.svg" alt="my-not-working"></div>
+		<section class="not-working vertical-scrolling">
+			<img data-src="images/not.svg" alt="my-not-working">
 			<pre id="not-working-hard"></pre>
 		</section>
 	</div>
@@ -171,32 +180,24 @@ g</a></li>
 	</footer>
 	<script>
 		(function () {
-
+			
 			history.pushState(null, document.title, window.location.pathname);
 
-			let work = document.getElementById('#working');
-			let skil = document.getElementById('#skills');
-			let notWorking = document.getElementById('#not-working');
+			$('#fullpage').fullpage({
+				sectionSelector: '.vertical-scrolling',
+				controlArrows: false,
+				lazyLoading: true,
+				anchors:['logo', 'working', 'skills', 'not-working']
+			});
 
-			// document.querySelector('.navigate').onclick = function(event) {
+			window.addEventListener('hashchange', (event) => {
 
-			// 	this.style.display = 'block';
+				if (location.hash === '#working') {
 
-			// 	let lol = event.target;
-			//  	lol.style.display = 'none';
-			// 	console.log(this);
+					document.querySelector('body').classList.toggle('trim');
 
-			// 	};
-			// if (window.location.hash == '#working') {
-			// 	console.log(window.location.hash);
-			// 	//document.querySelector('#working').click();
-			// }
-
-
-			document.querySelector('.navigate').addEventListener('click', (event) => {
-				document.querySelector('.sections-wrapper').classList.toggle('trim');
-
-				if (event.target.id === 'working') {
+					document.querySelector('.skills').classList.remove('bounce');
+					document.querySelector('.not-working').classList.remove('bounce');
 
 					function trimAnim() {
 						return new Promise((resolve) => {
@@ -217,7 +218,7 @@ g</a></li>
 										"working-hard",
 										[
 											"Javascript,\n",
-											"full-stack developer,\n",
+											"front-end developer,\n",
 											"sometimes designer...\n"
 										]
 									)
@@ -225,7 +226,7 @@ g</a></li>
 									writeTextByJS(
 										"working-hard",
 										[
-											"Javascript, full-stack developer,\n",
+											"Javascript, front-end developer,\n",
 											"     sometimes a designer ...\n"
 										]
 									);
@@ -237,13 +238,9 @@ g</a></li>
 					trimAnim();
 
 					function removTrim() {
-						document.querySelector('.sections-wrapper').classList.toggle('trim');
+						document.querySelector('body').classList.toggle('trim');
 
-						document.querySelector('.anim').style.display = 'none';
-						document.querySelector('.skills').classList.remove('skills-anim');
-						document.querySelector('.not-working').classList.remove('not-working-anim');
-
-						document.querySelector('.working').classList.add('working-anim');
+						document.querySelector('.working').classList.add('bounce');
 
 						document.querySelector('#skills-hard').innerHTML = '';
 						document.querySelector('#not-working-hard').innerHTML = '';
@@ -254,7 +251,12 @@ g</a></li>
 
 
 
-				if (event.target.id === 'skills') {
+				if (location.hash === '#skills') {
+
+					document.querySelector('body').classList.toggle('trim');
+
+					document.querySelector('.working').classList.remove('bounce');
+					document.querySelector('.not-working').classList.remove('bounce');
 
 					function trimAnim() {
 						return new Promise((resolve) => {
@@ -294,13 +296,9 @@ g</a></li>
 					trimAnim();
 
 					function removTrim() {
-						document.querySelector('.sections-wrapper').classList.toggle('trim');
+						document.querySelector('body').classList.toggle('trim');
 
-						document.querySelector('.anim').style.display = 'none';
-						document.querySelector('.working').classList.remove('working-anim');
-						document.querySelector('.not-working').classList.remove('not-working-anim');
-
-						document.querySelector('.skills').classList.add('skills-anim');
+						document.querySelector('.skills').classList.add('bounce');
 
 						document.querySelector('#working-hard').innerHTML = '';
 						document.querySelector('#not-working-hard').innerHTML = '';
@@ -313,7 +311,12 @@ g</a></li>
 
 
 
-				if (event.target.id === 'not-working') {
+				if (location.hash === '#not-working') {
+
+					document.querySelector('body').classList.toggle('trim');
+
+					document.querySelector('.skills').classList.remove('bounce');
+					document.querySelector('.working').classList.remove('bounce');
 
 					function trimAnim() {
 						return new Promise((resolve) => {
@@ -352,18 +355,25 @@ g</a></li>
 					trimAnim();
 
 					function removTrim() {
-						document.querySelector('.sections-wrapper').classList.toggle('trim');
+						document.querySelector('body').classList.toggle('trim');
 
-						document.querySelector('.anim').style.display = 'none';
-						document.querySelector('.skills').classList.remove('skills-anim');
-						document.querySelector('.working').classList.remove('working-anim');
-
-						document.querySelector('.not-working').classList.add('not-working-anim');
+						document.querySelector('.not-working').classList.add('bounce');
 
 						document.querySelector('#skills-hard').innerHTML = '';
 						document.querySelector('#working-hard').innerHTML = '';
 						return false;
 					}
+				}
+
+				if (location.hash === '#logo') {
+						
+						document.querySelector('.skills').classList.remove('bounce');
+						document.querySelector('.working').classList.remove('bounce');
+						document.querySelector('.not-working').classList.remove('bounce');
+
+						document.querySelector('#skills-hard').innerHTML = '';
+						document.querySelector('#working-hard').innerHTML = '';
+						document.querySelector('#not-working-hard').innerHTML = '';
 				}
 
 
@@ -387,28 +397,6 @@ g</a></li>
 
 				return false;
 			}
-
-
-
-
-			// 		window.oldScrollY = window.scrollY;
-			// document.onscroll = event => {
-			//     let res = window.oldScrollY > window.scrollY ? 1 : 2;
-			//     window.oldScrollY = window.scrollY;
-
-			//     if (res == 2 && window.scrollY > 1000) {
-			//         //namb++;
-			//         //getLenqth();
-			//         document.getElementById('topBtn').style.display = 'block';
-			//     } else document.getElementById('topBtn').style.display = 'none';
-			// }
-
-			// document.getElementById('topBtn').onclick = () => {
-			//     window.scrollTo({
-			//         top: 0,
-			//         behavior: 'smooth'
-			//     });
-			// }
 
 		})();
 	</script>
