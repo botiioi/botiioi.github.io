@@ -194,10 +194,12 @@ g</a></li>
 
 				if (location.hash === '#working') {
 
-					document.querySelector('body').classList.toggle('trim');
+					document.querySelector('.working').classList.add('bounce');
 
-					document.querySelector('.skills').classList.remove('bounce');
-					document.querySelector('.not-working').classList.remove('bounce');
+					document.querySelector('#skills-hard').innerHTML = '';
+					document.querySelector('#not-working-hard').innerHTML = '';
+
+					// document.querySelector('body').classList.toggle('trim');
 
 					function trimAnim() {
 						return new Promise((resolve) => {
@@ -205,7 +207,7 @@ g</a></li>
 								setTimeout(() => {
 									removTrim();
 									resolve();
-								}, 800);
+								}, 200);
 							})
 							.then(writeText);
 					}
@@ -232,31 +234,28 @@ g</a></li>
 									);
 								}
 								resolve();
-							}, 3000);
+							}, 2000);
 						});
 					}
 					trimAnim();
 
 					function removTrim() {
-						document.querySelector('body').classList.toggle('trim');
-
-						document.querySelector('.working').classList.add('bounce');
-
-						document.querySelector('#skills-hard').innerHTML = '';
-						document.querySelector('#not-working-hard').innerHTML = '';
+						//document.querySelector('body').classList.toggle('trim');
+						document.querySelector('.skills').classList.remove('bounce');
+						document.querySelector('.not-working').classList.remove('bounce');
 						return false;
 					}
 				}
 
 
-
-
 				if (location.hash === '#skills') {
 
-					document.querySelector('body').classList.toggle('trim');
+					document.querySelector('.skills').classList.add('bounce');
 
-					document.querySelector('.working').classList.remove('bounce');
-					document.querySelector('.not-working').classList.remove('bounce');
+					document.querySelector('#working-hard').innerHTML = '';
+					document.querySelector('#not-working-hard').innerHTML = '';
+
+					//document.querySelector('body').classList.toggle('trim');
 
 					function trimAnim() {
 						return new Promise((resolve) => {
@@ -264,7 +263,7 @@ g</a></li>
 								setTimeout(() => {
 									removTrim();
 									resolve();
-								}, 800);
+								}, 200);
 							})
 							.then(writeText);
 					}
@@ -290,33 +289,27 @@ g</a></li>
 									)
 								}
 								resolve();
-							}, 3000);
+							}, 2000);
 						});
 					}
 					trimAnim();
 
 					function removTrim() {
-						document.querySelector('body').classList.toggle('trim');
-
-						document.querySelector('.skills').classList.add('bounce');
-
-						document.querySelector('#working-hard').innerHTML = '';
-						document.querySelector('#not-working-hard').innerHTML = '';
+						//document.querySelector('body').classList.toggle('trim');
+						document.querySelector('.working').classList.remove('bounce');
+						document.querySelector('.not-working').classList.remove('bounce');
 						return false;
 					}
 				}
 
-
-
-
-
-
 				if (location.hash === '#not-working') {
 
-					document.querySelector('body').classList.toggle('trim');
+					document.querySelector('.not-working').classList.add('bounce');
 
-					document.querySelector('.skills').classList.remove('bounce');
-					document.querySelector('.working').classList.remove('bounce');
+					document.querySelector('#skills-hard').innerHTML = '';
+					document.querySelector('#working-hard').innerHTML = '';
+
+					//document.querySelector('body').classList.toggle('trim');
 
 					function trimAnim() {
 						return new Promise((resolve) => {
@@ -324,7 +317,7 @@ g</a></li>
 								setTimeout(() => {
 									removTrim();
 									resolve();
-								}, 800);
+								}, 200);
 							})
 							.then(writeText);
 					}
@@ -349,18 +342,15 @@ g</a></li>
 									)
 								}
 								resolve();
-							}, 3000);
+							}, 2000);
 						});
 					}
 					trimAnim();
 
 					function removTrim() {
-						document.querySelector('body').classList.toggle('trim');
-
-						document.querySelector('.not-working').classList.add('bounce');
-
-						document.querySelector('#skills-hard').innerHTML = '';
-						document.querySelector('#working-hard').innerHTML = '';
+						//document.querySelector('body').classList.toggle('trim');
+						document.querySelector('.skills').classList.remove('bounce');
+						document.querySelector('.working').classList.remove('bounce');
 						return false;
 					}
 				}
@@ -375,7 +365,6 @@ g</a></li>
 						document.querySelector('#working-hard').innerHTML = '';
 						document.querySelector('#not-working-hard').innerHTML = '';
 				}
-
 
 			});
 
