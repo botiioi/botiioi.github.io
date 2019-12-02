@@ -20,10 +20,8 @@ a {
 
 /* SECTIONS*/
 .sections-wrapper {
-    width: 100%;
-    height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 #logo {
@@ -59,18 +57,28 @@ a {
     animation: trim 1s ease-out 0.4s 1 normal;
 }
 
-.working,
-.skills,
-.not-working {
-    display: none;
+.fp-tableCell {
     text-align: center;
 }
 
-.working-anim,
-.skills-anim,
-.not-working-anim {
-    display: block;
+.working,
+.skills,
+.not-working {
     opacity: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.anim {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.bounce {
     animation: bounce-in 1s forwards 0.8s 1 normal;
 }
 
@@ -123,12 +131,13 @@ li:hover {
 
 /* FOOTER */
 .connect {
+    position: -webkit-sticky;
+    position: sticky;
     display: flex;
     padding: 2rem;
     margin-left: 5rem;
     margin-right: 5rem;
     justify-content: space-between;
-    position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
