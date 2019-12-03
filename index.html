@@ -183,6 +183,14 @@ g</a></li>
 			
 			history.pushState(null, document.title, window.location.pathname);
 
+			let clWork = document.querySelector('.working');
+			let clSkill = document.querySelector('.skills');
+			let clNot = document.querySelector('.not-working');
+
+			let idWork = document.querySelector('#working-hard');
+			let idSkill = document.querySelector('#skills-hard');
+			let idNot = document.querySelector('#not-working-hard');
+
 			$('#fullpage').fullpage({
 				sectionSelector: '.vertical-scrolling',
 				controlArrows: false,
@@ -194,18 +202,15 @@ g</a></li>
 
 				if (location.hash === '#working') {
 
-					document.querySelector('.working').classList.add('bounce');
+					clWork.classList.add('bounce');
+					idSkill.innerHTML = '';
+					idNot.innerHTML = '';
 
-					document.querySelector('#skills-hard').innerHTML = '';
-					document.querySelector('#not-working-hard').innerHTML = '';
-
-					// document.querySelector('body').classList.toggle('trim');
-
-					function trimAnim() {
+					function bounce() {
 						return new Promise((resolve) => {
 
 								setTimeout(() => {
-									removTrim();
+									bounceOff();
 									resolve();
 								}, 200);
 							})
@@ -237,31 +242,26 @@ g</a></li>
 							}, 2000);
 						});
 					}
-					trimAnim();
+					bounce();
 
-					function removTrim() {
-						//document.querySelector('body').classList.toggle('trim');
-						document.querySelector('.skills').classList.remove('bounce');
-						document.querySelector('.not-working').classList.remove('bounce');
+					function bounceOff() {
+						clSkill.classList.remove('bounce');
+						clNot.classList.remove('bounce');
 						return false;
 					}
 				}
 
-
 				if (location.hash === '#skills') {
 
-					document.querySelector('.skills').classList.add('bounce');
+					clSkill.classList.add('bounce');
+					idWork.innerHTML = '';
+					idNot.innerHTML = '';
 
-					document.querySelector('#working-hard').innerHTML = '';
-					document.querySelector('#not-working-hard').innerHTML = '';
-
-					//document.querySelector('body').classList.toggle('trim');
-
-					function trimAnim() {
+					function bounce() {
 						return new Promise((resolve) => {
 
 								setTimeout(() => {
-									removTrim();
+									bounceOff();
 									resolve();
 								}, 200);
 							})
@@ -292,30 +292,26 @@ g</a></li>
 							}, 2000);
 						});
 					}
-					trimAnim();
+					bounce();
 
-					function removTrim() {
-						//document.querySelector('body').classList.toggle('trim');
-						document.querySelector('.working').classList.remove('bounce');
-						document.querySelector('.not-working').classList.remove('bounce');
+					function bounceOff() {
+						clWork.classList.remove('bounce');
+						clNot.classList.remove('bounce');
 						return false;
 					}
 				}
 
 				if (location.hash === '#not-working') {
 
-					document.querySelector('.not-working').classList.add('bounce');
+					clNot.classList.add('bounce');
+					idSkill.innerHTML = '';
+					idWork.innerHTML = '';
 
-					document.querySelector('#skills-hard').innerHTML = '';
-					document.querySelector('#working-hard').innerHTML = '';
-
-					//document.querySelector('body').classList.toggle('trim');
-
-					function trimAnim() {
+					function bounce() {
 						return new Promise((resolve) => {
 
 								setTimeout(() => {
-									removTrim();
+									bounceOff();
 									resolve();
 								}, 200);
 							})
@@ -345,48 +341,43 @@ g</a></li>
 							}, 2000);
 						});
 					}
-					trimAnim();
+					bounce();
 
-					function removTrim() {
-						//document.querySelector('body').classList.toggle('trim');
-						document.querySelector('.skills').classList.remove('bounce');
-						document.querySelector('.working').classList.remove('bounce');
+					function bounceOff() {
+						clSkill.classList.remove('bounce');
+						clWork.classList.remove('bounce');
 						return false;
 					}
 				}
 
-				if (location.hash === '#logo') {
-						
-						document.querySelector('.skills').classList.remove('bounce');
-						document.querySelector('.working').classList.remove('bounce');
-						document.querySelector('.not-working').classList.remove('bounce');
+				if (location.hash === '#logo') {						
+						clSkill.classList.remove('bounce');
+						clWork.classList.remove('bounce');
+						clNot.classList.remove('bounce');
 
-						document.querySelector('#skills-hard').innerHTML = '';
-						document.querySelector('#working-hard').innerHTML = '';
-						document.querySelector('#not-working-hard').innerHTML = '';
+						idSkill.innerHTML = '';
+						idWork.innerHTML = '';
+						idNot.innerHTML = '';
 				}
 
 			});
 
-
 			function writeTextByJS(id, text, speed) {
 
-				var ele = document.getElementById(id),
-					txt = text.join("").split("");
+				let elem = document.getElementById(id),
+					txt = text.join('').split('');
 
-				var interval = setInterval(function () {
+				let interval = setInterval(function () {
 
 					if (!txt[0]) {
-
 						return clearInterval(interval);
 					};
 
-					ele.innerHTML += txt.shift();
+					elem.innerHTML += txt.shift();
 				}, speed != undefined ? speed : 60);
 
 				return false;
 			}
-
 		})();
 	</script>
 </body>
