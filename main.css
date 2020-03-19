@@ -53,10 +53,6 @@ a {
     animation: stroke 0.1s ease forwards 2s, gaze 4s normal 6s, clip 15s step-end 12s infinite;
 }
 
-/* .trim {
-    animation: trim 1s ease-out 0.4s 1 normal;
-} */
-
 .fp-tableCell {
     text-align: center;
 }
@@ -80,7 +76,6 @@ a {
 
 .bounce {
     animation: bounce-in 1.3s forwards 0.3s 1 normal;
-    -webkit-animation: bounce-in 1.3s forwards 0.3s 1 normal;
 }
 
 #working-hard,
@@ -191,7 +186,7 @@ li:hover {
     50% {
         opacity: 1;
         transform: scale(1.2);
-    }
+}
 
     70% {
         opacity: 1;
@@ -203,52 +198,6 @@ li:hover {
         transform: scale(1);
     }
 }
-
-/* @keyframes trim {
-    0% {
-        opacity: 1;
-    }
-
-    5% {
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 0.5;
-    }
-
-    15% {
-        opacity: 0;
-    }
-
-    20% {
-        opacity: 0.5;
-    }
-
-    25% {
-        opacity: 0;
-    }
-
-    30% {
-        opacity: 0.5;
-    }
-
-    35% {
-        opacity: 0;
-    }
-
-    40% {
-        opacity: 0.5;
-    }
-
-    45% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-} */
 
 @keyframes gaze {
 

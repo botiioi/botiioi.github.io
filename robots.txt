@@ -3,5 +3,5 @@ Disallow:
 
 User-agent: YandexBot
 Disallow:
-Host: https://kapustiansky.tk
-Sitemap: https://kapustiansky.tk/sitemap.xml
+Host: www.kapustiansky.tk
+Sitemap: https://kapustiansky.tk/Sitemap.xml
