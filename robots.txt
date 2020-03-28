@@ -1,7 +1,9 @@
 User-agent: *
 Disallow:
+Host: www.kapustiansky.tk
+Sitemap: https://kapustiansky.tk/sitemap.xml
 
 User-agent: YandexBot
 Disallow:
 Host: www.kapustiansky.tk
-Sitemap: https://kapustiansky.tk/Sitemap.xml
+Sitemap: https://kapustiansky.tk/sitemap.xml
