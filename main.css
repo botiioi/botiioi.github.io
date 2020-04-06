@@ -6,44 +6,6 @@
     font-size: 100%;
 }
 
-/* canvas */
-
-canvas {
-    position: absolute;
-    opacity: 0.2;
-}
-
-/* body {
-    margin: 0;
-} */
-
-.lol {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 header {
     position: absolute;
     visibility: hidden;
@@ -122,7 +84,6 @@ a {
     margin-top: 2rem;
     font-size: 3em;
     color: rgb(90, 90, 90);
-    text-shadow: 2px 2px 3px rgba(70, 70, 70, 0.8);
 }
 
 img {
@@ -147,16 +108,20 @@ li {
     font-size: 1.1rem;
     list-style-type: none;
     padding: 1px;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, .8);
     cursor: pointer;
     transition: 0.3s;
 }
 
 li:hover {
     transform: translate(-3px, -3px);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, .8);
 }
 
 .nav-link {
+    color: rgba(114, 108, 108, 0.863);
+}
+
+.nav-link:hover {
     color: black;
 }
 
@@ -186,16 +151,11 @@ li:hover {
     animation: bounce-in 0.7s forwards 10s;
 }
 
-.social-cont {
+.telegram-cont,
+.lin-cont,
+.github-cont,
+.mail-cont {
     display: flex;
-}
-
-.social-cont:hover .hover-img {
-    transform: translate(0, -4px);
-}
-
-.social-cont:hover .acount-link {
-    color: black;
 }
 
 .acount-link {
@@ -205,13 +165,11 @@ li:hover {
     padding-left: 0.5rem;
     padding-top: 0.3rem;
     line-height: 1.2rem;
-    transition: 0.2s;
 }
 
-.hover-img {
-    transition: 0.2s;
+.acount-link:hover {
+    color: black;
 }
-
 
 /* ANIMATION */
 
@@ -327,8 +285,6 @@ li:hover {
         height: 160px;
     }
 }
-
-
 
 /* MEDIA */
 @media screen and (max-width: 991.98px) {
