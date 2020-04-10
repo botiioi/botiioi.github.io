@@ -401,13 +401,13 @@ li:hover {
 
     .portfolio-img-1 {
         width: 320px;
-        height: 80px;
+        height: 94px;
         margin-top: 6rem;
     }
 
     .portfolio-img-2 {
         width: 320px;
-        height: 80px;
+        height: 94px;
         margin-top: 2rem;
     }
 
@@ -541,10 +541,10 @@ li:hover {
         height: 140px;
     }
 
-    .portfolio-img {
+    /* .portfolio-img {
         width: 280px;
         height: 70px;
-    }
+    } */
 
     #working-hard,
     #skills-hard,
@@ -609,10 +609,12 @@ only screen and (min-resolution: 2dppx) and (max-width: 375px) {
     img,
     .portfolio-img-1 {
         width: 240px;
+        height: auto;
         margin-top: 4rem;
     }
 
     .portfolio-img-2 {
         width: 240px;
+        height: auto;
     }
 }
