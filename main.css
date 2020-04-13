@@ -57,7 +57,7 @@ a {
     flex-direction: column;
 }
 
-#logo {
+.logo {
     position: absolute;
     top: 45%;
     left: 50%;
@@ -211,19 +211,16 @@ li:hover {
     color: black;
 }
 
-.nav-link:target {
+/* add js */
+
+.grey-list {
     color: rgba(114, 108, 108, 0.863);
     text-shadow: none;
 }
 
-#portfolio {
+.portf-link {
     color: rgb(255, 2, 2);
     text-shadow: 2px 2px 3px rgba(109, 0, 0, 0.473);
-}
-
-#portfolio:target {
-    color: rgba(114, 108, 108, 0.863);
-    text-shadow: none;
 }
 
 /* FOOTER */
@@ -470,7 +467,7 @@ li:hover {
 }
 
 @media screen and (max-width: 895px) and (orientation: landscape) {
-    #logo {
+    .logo {
         animation: logo-land 2s ease forwards 2.5s;
     }
 
@@ -534,7 +531,7 @@ li:hover {
 }
 
 @media screen and (max-width:768px) {
-    #logo {
+    .logo {
         animation: logo-min 2s ease forwards 2.5s;
     }
 
@@ -607,7 +604,7 @@ only screen and (min-device-pixel-ratio: 2) and (max-width: 375px),
 only screen and (min-resolution: 192dpi) and (max-width: 375px),
 only screen and (min-resolution: 2dppx) and (max-width: 375px) {
 
-    #logo {
+    .logo {
         animation: logo-retina 2s ease forwards 2.5s;
     }
 

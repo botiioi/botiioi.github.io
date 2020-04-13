@@ -70,7 +70,7 @@
 				<h2>full-stack and node.js development</h2>
 				<h3>web-developer, coder, programer</h3>
 			</header>
-			<svg id="logo" viewBox="0 0 67.984642 97.2226791">
+			<svg class="logo" viewBox="0 0 67.984642 97.2226791">
 
 				<path class="first-line" fill="none" stroke="#000000" stroke-width="5" stroke-linecap="round"
 					stroke-linejoin="round" stroke-miterlimit="10"
@@ -134,7 +134,7 @@
 	</div>
 	<nav>
 		<ul class="navigate">
-<li><a class="nav-link" id="working" href="#working">#
+<li><a class="nav-link" href="#working">#
 w
 o
 r
@@ -142,14 +142,14 @@ k
 i
 n
 g</a></li>
-<li><a class="nav-link" id="skills" href="#skills">#
+<li><a class="nav-link" href="#skills">#
 s
 k
 i
 l
 l
 s</a></li>
-<li><a class="nav-link" id="not-working" href="#not-working">#
+<li><a class="nav-link" href="#not-working">#
 n
 o
 t
@@ -161,7 +161,7 @@ k
 i
 n
 g</a></li>
-<li><a class="nav-link" id="portfolio" href="#portfolio">#
+<li><a class="nav-link" href="#portfolio">#
 ?
 ?
 ?</a></li>
@@ -335,7 +335,18 @@ g</a></li>
 	<script>
 		(function () {
 
+			$('#fullpage').fullpage({
+				sectionSelector: '.vertical-scrolling',
+				controlArrows: false,
+				lazyLoading: true,
+				anchors: ['logo', 'working', 'skills', 'not-working', 'portfolio']
+			});
+
 			history.pushState(null, document.title, window.location.pathname);
+
+			let activeLink = document.querySelectorAll('.nav-link');
+			activeLink[3].classList.add('portf-link');
+			//console.log(activeLink);
 
 			let clWork = document.querySelector('.working');
 			let clSkill = document.querySelector('.skills');
@@ -347,23 +358,24 @@ g</a></li>
 			let idNot = document.querySelector('#not-working-hard');
 			let idPortfolio = document.querySelector('#portfolio-hard');
 
-			$('#fullpage').fullpage({
-				sectionSelector: '.vertical-scrolling',
-				controlArrows: false,
-				lazyLoading: true,
-				anchors: ['logo', 'working', 'skills', 'not-working', 'portfolio']
-			});
-
 			window.addEventListener('hashchange', (event) => {
+
+				activeLink[3].classList.add('portf-link');
+				activeLink.forEach(function (i, length) {
+					i.classList.remove('grey-list');
+				});
+
+				idWork.innerHTML = '';
+				idSkill.innerHTML = '';
+				idNot.innerHTML = '';
+				idPortfolio.innerHTML = '';
 
 				if (location.hash === '#working') {
 
-					idPortfolio.classList.remove('height-port-hard');
+					activeLink[0].classList.add('grey-list');
 
+					idPortfolio.classList.remove('height-port-hard');
 					clWork.classList.add('bounce');
-					idSkill.innerHTML = '';
-					idNot.innerHTML = '';
-					idPortfolio.innerHTML = '';
 
 					function bounce() {
 						return new Promise((resolve) => {
@@ -413,10 +425,10 @@ g</a></li>
 
 				if (location.hash === '#skills') {
 
+					activeLink[1].classList.add('grey-list');
+
+					idPortfolio.classList.remove('height-port-hard');
 					clSkill.classList.add('bounce');
-					idWork.innerHTML = '';
-					idNot.innerHTML = '';
-					idPortfolio.innerHTML = '';
 
 					function bounce() {
 						return new Promise((resolve) => {
@@ -465,12 +477,10 @@ g</a></li>
 
 				if (location.hash === '#not-working') {
 
-					idPortfolio.classList.remove('height-port-hard');
+					activeLink[2].classList.add('grey-list');
 
+					idPortfolio.classList.remove('height-port-hard');
 					clNot.classList.add('bounce');
-					idSkill.innerHTML = '';
-					idWork.innerHTML = '';
-					idPortfolio.innerHTML = '';
 
 					function bounce() {
 						return new Promise((resolve) => {
@@ -518,12 +528,11 @@ g</a></li>
 
 				if (location.hash === '#portfolio') {
 
-					idPortfolio.classList.add('height-port-hard');
+					activeLink[3].classList.remove('portf-link');
+					activeLink[3].classList.add('grey-list');
 
+					idPortfolio.classList.add('height-port-hard');
 					clPortfolio.classList.add('bounce');
-					idSkill.innerHTML = '';
-					idNot.innerHTML = '';
-					idWork.innerHTML = '';
 
 					function bounce() {
 						return new Promise((resolve) => {
@@ -566,11 +575,6 @@ g</a></li>
 					clNot.classList.remove('bounce');
 					clPortfolio.classList.remove('bounce');
 					idPortfolio.classList.remove('height-port-hard');
-
-					idSkill.innerHTML = '';
-					idWork.innerHTML = '';
-					idNot.innerHTML = '';
-					idPortfolio.innerHTML = '';
 				}
 
 			});
