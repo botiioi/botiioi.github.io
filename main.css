@@ -28,7 +28,7 @@
 
 canvas {
     position: absolute;
-    opacity: 0.3;
+    opacity: 0.2;
 }
 
 .lol {
@@ -395,10 +395,6 @@ li:hover {
 
 /* MEDIA */
 @media screen and (max-width: 991.98px) {
-    canvas {
-        position: absolute;
-        opacity: 0.5;
-    }
 
     .logo {
         animation: logo-tablet 2s ease forwards 2.5s;
