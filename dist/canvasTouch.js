@@ -21,7 +21,7 @@
 	var colorArray = [
 		'#3A7D7C',
 		'#03A6A6',
-		'#EBEB00',
+		'#EC5A31',
 		'#FE736C',
 		'#FF7801',
 	];
@@ -88,7 +88,7 @@ window.addEventListener('touchmove', function(e) {
 
 		circleArray = []; //не дает запускать каждый цикл при динамическом расширении окна
 
-		for (var i = 0; i < 700; i++) {
+		for (var i = 0; i < 650; i++) {
 			var radius = Math.random() * 3 + 1;
 			var x = Math.random() * (innerWidth - radius * 2) + radius;
 			var y = Math.random() * (innerHeight - radius * 2) + radius;
