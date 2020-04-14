@@ -15,7 +15,7 @@
 
 	
 
-	var maxRadius = 55;
+	var maxRadius = 45;
 	// minRadius = 8;
 
 	var colorArray = [
@@ -88,7 +88,7 @@ window.addEventListener('touchmove', function(e) {
 
 		circleArray = []; //не дает запускать каждый цикл при динамическом расширении окна
 
-		for (var i = 0; i < 1000; i++) {
+		for (var i = 0; i < 700; i++) {
 			var radius = Math.random() * 3 + 1;
 			var x = Math.random() * (innerWidth - radius * 2) + radius;
 			var y = Math.random() * (innerHeight - radius * 2) + radius;
