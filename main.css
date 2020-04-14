@@ -395,7 +395,12 @@ li:hover {
 
 /* MEDIA */
 @media screen and (max-width: 991.98px) {
-    #logo {
+    canvas {
+        position: absolute;
+        opacity: 0.3;
+    }
+
+    .logo {
         animation: logo-tablet 2s ease forwards 2.5s;
         width: 280px;
         height: 280px;
