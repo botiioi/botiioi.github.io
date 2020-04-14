@@ -15,15 +15,15 @@
 
 	
 
-	var maxRadius = 30;
+	var maxRadius = 20;
 	// minRadius = 8;
 
 	var colorArray = [
-		'#41BFB3',
-		'#40012F',
-		'#FFFC3E',
-		'#FFAD01',
-		'#44C0FF',
+		'#FFF249',
+		'#E8D051',
+		'#FFDF00',
+		'#FBFF87',
+		'#E7E84C',
 	];
 
 
@@ -68,8 +68,8 @@ window.addEventListener('touchmove', function(e) {
 
 			//interactiviti
 
-			if (touch.x - this.x < 60 && touch.x - this.x > -60 && touch.y - this.y < 60 && touch.y - this.y > -
-				60) { //финт ушами!
+			if (touch.x - this.x < 50 && touch.x - this.x > -50 && touch.y - this.y < 50 && touch.y - this.y > -
+				50) { //финт ушами!
 				if (this.radius < maxRadius) {
 					this.radius += 1;
 				}
