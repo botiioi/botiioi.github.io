@@ -21,7 +21,7 @@
 	var colorArray = [
 		'#3A7D7C',
 		'#03A6A6',
-		'#EC5A31',
+		'#EBEB00',
 		'#FE736C',
 		'#FF7801',
 	];
