@@ -15,7 +15,7 @@
 
 	
 
-	var maxRadius = 40;
+	var maxRadius = 30;
 	// minRadius = 8;
 
 	var colorArray = [
@@ -68,8 +68,8 @@ window.addEventListener('touchmove', function(e) {
 
 			//interactiviti
 
-			if (touch.x - this.x < 70 && touch.x - this.x > -70 && touch.y - this.y < 70 && touch.y - this.y > -
-				70) { //финт ушами!
+			if (touch.x - this.x < 60 && touch.x - this.x > -60 && touch.y - this.y < 60 && touch.y - this.y > -
+				60) { //финт ушами!
 				if (this.radius < maxRadius) {
 					this.radius += 1;
 				}
