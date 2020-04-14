@@ -68,8 +68,8 @@ window.addEventListener('touchmove', function(e) {
 
 			//interactiviti
 
-			if (touch.x - this.x < 90 && touch.x - this.x > -90 && touch.y - this.y < 90 && touch.y - this.y > -
-				90) { //финт ушами!
+			if (touch.x - this.x < 80 && touch.x - this.x > -80 && touch.y - this.y < 80 && touch.y - this.y > -
+				80) { //финт ушами!
 				if (this.radius < maxRadius) {
 					this.radius += 1;
 				}
