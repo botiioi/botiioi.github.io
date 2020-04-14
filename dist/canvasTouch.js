@@ -19,11 +19,11 @@
 	// minRadius = 8;
 
 	var colorArray = [
-		'#FFF249',
-		'#E8D051',
-		'#FFDF00',
-		'#FBFF87',
-		'#E7E84C',
+		'#3A7D7C',
+		'#03A6A6',
+		'#F7D147',
+		'#FE736C',
+		'#EC5A31',
 	];
 
 
